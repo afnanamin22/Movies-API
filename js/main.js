@@ -1,5 +1,7 @@
 let containerr=[];
 let showResult=[];
+let CurrentArr=[];
+let showCurrent=[];
 let MovieArr,ResultArr;
 let pass;
 let LogoWidth=$('.sideNaveLogos').innerWidth();
@@ -12,6 +14,7 @@ let myage=document.getElementById('fourthInput');
 let mypass=document.getElementById('fifthInput');
 let myRepass=document.getElementById('sexthInput');
 let searchTerm=document.getElementById('firstInput');
+let currentSearch=document.getElementById('secondInput');
 let title,date,y,link,a,db,b;
 /* API to get now_playing movies and show it */
 async function Display(PressedID)
@@ -76,6 +79,7 @@ async function Display(PressedID)
     document.getElementById('DisplayData').innerHTML=containerr;
   link='';
   containerr=[];
+  return MovieArr;
 }
 
 /* To open the website on now_playing movies */
@@ -256,5 +260,41 @@ async function Search()
 
 }
 
+function CurrentSearch()
+{
+
+    for (let i = 0; i < MovieArr.length; i++) {
+       if(MovieArr[i].title.toLowerCase().includes(currentSearch.value.toLowerCase()))
+       {
+            if(MovieArr[i].media_type=="movie")
+            {
+                title=MovieArr[i].title;
+                date=MovieArr[i].release_date;
+            }
+            else if(MovieArr[i].media_type=="tv")
+            {
+                title=MovieArr[i].name;
+                date=MovieArr[i].first_air_date;
+            }
+            else
+            {
+                title=MovieArr[i].title;
+                date=MovieArr[i].release_date;
+            }
+        showCurrent+=` <div class="col-md-4 position-relative mt-4">
+        <img src="https://image.tmdb.org/t/p/w500${MovieArr[i].poster_path}" class="img-fluid rounded ">
+        <div class="hoverImage d-flex flex-column justify-content-center align-items-center position-absolute w-100 h-100 p-4">
+        <h2 class=" text-black font-weight-bolder text-center">${title}</h2>
+        <p class=" text-black font-weight-bolder text-center reshape">${MovieArr[i].overview}</p>
+        <p class=" text-black font-weight-bolder">rate:${MovieArr[i].vote_average}</p>
+        <p class=" text-black font-weight-bolder">${date}</p>
+        </div>
+        </div>`
+       }
+      
+    }
+    document.getElementById('DisplayData').innerHTML=showCurrent;
+    showCurrent='';
+}
 
 
