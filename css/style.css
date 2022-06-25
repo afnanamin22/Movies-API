@@ -1,0 +1,151 @@
+body
+{
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    background-color:  #000000f2;
+}
+.Input1
+{
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+}
+.col-md-4
+{
+    overflow: hidden;
+}
+.hoverImage
+{
+   background-color: rgba(255, 255, 255,0.8);
+    top: 100%;
+    left: 0;
+    transition: top 1s ease;
+   
+}
+.col-md-4:hover .hoverImage
+{
+    top: 0%;   
+}
+
+.btnAdjust
+{
+    color: rgb(190, 28, 28);
+    border: 1px solid rgb(190, 28, 28);
+    text-align: center;
+}
+.btnAdjust:hover
+{
+    color: rgb(190, 28, 28) !important;
+}
+.sideNav
+{
+    top: 0px;
+    left: 0px;
+    z-index: 9999999999 !important; 
+}
+.sideNaveLogos
+{
+    background-color: white;
+    height: 100vh;
+    width: 20%;
+}
+:root{
+    scroll-behavior: smooth;
+}
+.sideNavContent
+{
+    background-color: black;
+    height: 100vh;
+}
+.Logo
+{
+   position: absolute;
+   top: 0;
+   cursor: pointer;
+}
+.Logo i{
+    font-size: 30px;
+    cursor: pointer;
+}
+.closedMenu i{
+    font-size: 30px;
+    cursor: pointer;
+}
+.share 
+{
+    position: absolute;
+    bottom: 0;
+}
+.share i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navParagraph
+{
+    color: lightgray;
+    font-size: 14px;
+  
+}
+.Links li
+{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.Links
+{
+    list-style: none;
+    position: relative;
+    top: 20px;
+}
+
+.LowerContent
+{
+    margin-left: 30px;
+    position: relative;
+    bottom: -100px;
+}
+.clearFix
+{
+    clear: both;
+   
+}
+.Links li :hover
+{  
+    color: rgb(196, 42, 42);
+}
+.secondIcon
+{
+   opacity: 0;
+}
+.firstIcon
+{
+    opacity: 1;
+}
+
+.alert-danger
+{
+    opacity: 0;
+}
+.apear1,.apear2,.apear3,.apear4,.apear5
+{
+   display: none;
+}
+.submitBtn2:hover
+{
+    background-color: rgb(196, 42, 42);
+    color: white !important;
+}
+.reshape
+{
+    font-size: 11px;
+}
+.apear2:hover,.apear1:hover,.apear3:hover,.apear4:hover,.apear5:hover
+{
+ color: rgb(196, 42, 42);  
+}

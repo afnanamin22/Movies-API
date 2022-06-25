@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   
+        <!-- Search Area -->
+        <header class="d-flex justify-content-center mt-4 mb-4 " id="inputHeader">
+            <input type="text" name="" id="firstInput" oninput="Search();" class="border-top-0 border-right-0 border-left-0 w-25 p-2 Input1 text-center mx-4" placeholder="get movies by word...">
+            <input type="text" name="" id="secondInput" class="border-top-0 border-right-0 border-left-0 w-25 p-2 Input1 text-center mx-4" placeholder="search...">
+        </header>
+        <!-- Movies Data -->
+        <div class="container" >            
+            <div class="row" id="DisplayData">
+                
+                  
+            </div>
+            </div>
+            
+       
+       
+       
+           <!-- Contact Menu at Footer-->
+         <footer class="mt-4 " id="inputFooter">
+         <div class="container">
+            <h2 class="text-white mb-4 mt-4 mx-4 headline ">ContactUS..</h2>
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center mb-4 flex-column ">
+                    <input type="text" name="" id="uniquee1" class="border-top-0 border-right-0 border-left-0 w-75  Input1 text-center mx-4 " oninput="checkName();"  onKeyup="activate();"  placeholder="Enter Your Name">
+                    <div class="alert-danger text-center one">Your name is not valid Your name must be more than 3 letters </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center mb-4 flex-column ">
+                    <input type="email" name="" id="uniquee2" class="border-top-0 border-right-0 border-left-0 w-75  Input1 text-center " oninput="checkEmail();" onKeyup="activate();" placeholder="Enter Email">
+                    <div class="alert-danger text-center two">Your Email is not valid </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center mb-4 flex-column ">
+                    <input type="number" name="" id="thirdInput" class="border-top-0 border-right-0 border-left-0  w-75  Input1 text-center mx-4"  oninput="checkPhone();" onKeyup="activate();" placeholder="Enter Phone">
+                    <div class="alert-danger text-center three">Your Phone number is not valid please enter 11 digits </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center mb-4 flex-column ">
+                    <input type="number" name="" id="fourthInput" class="border-top-0 border-right-0 border-left-0  w-75  Input1 text-center "  oninput="checkAge();" onKeyup="activate();" placeholder="Enter Age">
+                    <div class="alert-danger text-center four">Your age is not valid </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center mb-4 flex-column ">
+                    <input type="password" name="" id="fifthInput" class="border-top-0 border-right-0 border-left-0  w-75  Input1 text-center mx-4 " oninput="checkPassword();" onKeyup="activate();"  placeholder="Enter Password">
+                    <div class="alert-danger text-center five">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center mb-4 flex-column  ">
+                    <input type="password" name="" id="sexthInput" class="border-top-0 border-right-0 border-left-0  w-75  Input1 text-center "  oninput="checkRepassword();" onKeyup="activate();" placeholder="Enter RePassword">
+                    <div class="alert-danger text-center sex">Enter valid Repassword </div>
+                </div>
+
+            </div>
+            <div id="submitbtn">
+                <input type="button" value="Submit" class="btn btnAdjust mb-4 mt-2 mx-4 submitBtn" disabled>
+            </div>
+            
+         </div>
+         </footer>
+
+
+         <!-- SideNav Logos -->
+     <div class="sideNav position-fixed">
+        <div class="sideNaveLogos float-right d-flex flex-column justify-content-center align-items-center position-relative">
+            <div class="Logo w-50 mt-3">
+                <img src="logo.png" alt="" class="w-100">
+            </div>
+            <div class="closedMenu d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-solid fa-bars firstIcon"></i>
+                <i class="fa-solid fa-xmark secondIcon"></i>
+            </div>
+            <div class="share d-flex flex-column align-items-center justify-content-center">
+                <i class="fas fa-globe mb-3 mt-3"></i>
+                <i class="fas fa-share-alt mb-4"></i>
+            </div>
+           <!--  <div class="clearFix"></div> -->
+        </div>
+       
+        <!-- SideNav Content -->
+        <div class="sideNavContent">
+            <ul class="Links">
+               <li class="mb-2 apear1" id="playing" onclick="Display(this);">Now Playing</li>
+               <li class="mb-2 my-4 apear2" id="popular" onclick="Display(this);">Popular</li>
+               <li class="mb-2 my-4 apear3" id="top" onclick="Display(this);">Top Rated</li>
+               <li class="mb-2 my-4 apear4" id="trending"onclick="Display(this);">Trending</li>
+               <li class="mb-2 my-4 apear5" id="upcoming" onclick="Display(this);">UpComing</li>
+               <!-- <li class="mb-2 my-4 apear6"><a href="#inputFooter" >Contact Us</a></li> -->
+            </ul>
+            
+                <div class="LowerContent d-flex justify-content-start align-items-start flex-column ">
+                    <div class="shareLogos">
+                        <a href=""> <i class="fab fa-facebook-f text-white mx-2"></i></a>
+                        <a href=""> <i class="fab fa-twitter text-white mx-2"></i></a>
+                        <a href=""><i class="fas fa-globe text-white mx-2"></i></a> 
+                   </div>
+                <p class="navParagraph mt-4">Copyright Â© 2019 All Rights Reserved.</p>
+            </div>
+            
+        </div>
+     </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    <script src="https://kit.fontawesome.com/f485916a6e.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
