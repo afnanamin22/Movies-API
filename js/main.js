@@ -79,13 +79,14 @@ async function Display(PressedID)
     document.getElementById('DisplayData').innerHTML=containerr;
   link='';
   containerr=[];
-  return MovieArr;
+  
 }
 
 /* To open the website on now_playing movies */
-window.onload=function(){
+$(document).ready(function(){
     Display();
-};
+  });
+
 /* To change navBar Icon and show its elements */
 $('.closedMenu i').click(function(){
     if($('.sideNav').css('left')=='0px')
@@ -229,7 +230,6 @@ async function Search()
         b= await db.json();
     }
     ResultArr=b.results;
-    console.log(ResultArr);
     for (let i = 0; i < ResultArr.length; i++) {
         if(ResultArr[i].media_type=="movie")
         {
