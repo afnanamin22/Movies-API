@@ -107,7 +107,9 @@ $('.closedMenu i').click(function(){
                 $('.apear2').slideDown(400,function(){
                     $('.apear3').slideDown(400,function(){
                         $('.apear4').slideDown(400,function(){
-                            $('.apear5').slideDown(400)
+                            $('.apear5').slideDown(400,function(){
+                                $('.apear6').slideDown(400)
+                            })
                         }) 
                     })
                 })
@@ -119,7 +121,7 @@ $('.closedMenu i').click(function(){
        $('.apear3').css('display','none');
        $('.apear4').css('display','none');
        $('.apear5').css('display','none');
-   /*     $('.apear6').css('display','none'); */
+       $('.apear6').css('display','none');
        
     }
 })

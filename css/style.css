@@ -51,9 +51,7 @@ body
     height: 100vh;
     width: 20%;
 }
-:root{
-    scroll-behavior: smooth;
-}
+
 .sideNavContent
 {
     background-color: black;
@@ -132,7 +130,7 @@ body
 {
     opacity: 0;
 }
-.apear1,.apear2,.apear3,.apear4,.apear5
+.apear1,.apear2,.apear3,.apear4,.apear5,.apear6
 {
    display: none;
 }
@@ -145,7 +143,13 @@ body
 {
     font-size: 11px;
 }
-.apear2:hover,.apear1:hover,.apear3:hover,.apear4:hover,.apear5:hover
+.apear2:hover,.apear1:hover,.apear3:hover,.apear4:hover,.apear5:hover,.apear6:hover
 {
  color: rgb(196, 42, 42);  
+}
+a
+{
+    color: white;
+    text-decoration: none !important;
+    
 }
